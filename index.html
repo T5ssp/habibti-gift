@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#211723">
-<title>مجرّتكِ الخاصة ♡ | نسخة مصممة من الصفر</title>
+<title>لحبيبتي… شيء صغير يفرّحكِ 🤍</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
@@ -602,6 +602,74 @@ button:focus-visible, input:focus-visible {
   font-size: 14.5px;
   line-height: 2.1;
   color: var(--muted);
+}
+
+.smile-note {
+  max-width: 540px;
+  margin: 22px auto 0;
+  padding: 20px;
+  border: 1px solid rgba(217, 187, 126, 0.3);
+  border-radius: 20px;
+  background: rgba(215, 160, 173, 0.08);
+  font-family: var(--serif);
+  font-size: clamp(23px, 4vw, 30px);
+  line-height: 1.8;
+}
+
+.open-when-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px;
+}
+
+.open-when-letter {
+  border: 1px solid rgba(217, 187, 126, 0.3);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(120, 60, 85, 0.25), rgba(48, 32, 47, 0.7));
+  overflow-wrap: anywhere;
+}
+
+.open-when-letter summary {
+  padding: 22px 18px;
+  cursor: pointer;
+  color: var(--gold);
+  font-size: 16px;
+  line-height: 1.8;
+  border-radius: 20px;
+}
+
+.open-when-letter summary::marker {
+  color: var(--rose);
+}
+
+.open-when-letter summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.open-when-letter[open] summary {
+  border-bottom: 1px solid rgba(217, 187, 126, 0.16);
+  border-radius: 20px 20px 0 0;
+}
+
+.open-when-letter p {
+  margin: 0;
+  padding: 20px;
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: 23px;
+  line-height: 1.9;
+}
+
+@media (max-width: 620px) {
+  .open-when-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#vaultCodeGame {
+  margin-top: 24px;
 }
 
 /* Chapter Section Layout */
@@ -1465,6 +1533,320 @@ button:focus-visible, input:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* Ten little gifts */
+/* Small surprises share the gift's original palette. */
+html { scroll-padding-block: 130px 110px; }
+#chapter-surprises { scroll-margin-top: 120px; }
+.gift-extras :is(button, summary, input, textarea, select) { scroll-margin-block: 130px 110px; }
+.extras-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.extra-card { min-width: 0; padding: clamp(20px, 4vw, 30px); border: 1px solid rgba(217,187,126,.28); border-radius: 24px; background: linear-gradient(145deg, rgba(120,60,85,.22), rgba(33,23,35,.65)); overflow-wrap: anywhere; }
+.extra-card-wide { grid-column: 1 / -1; }
+.extra-title { margin: 0 0 12px; font-family: var(--serif); color: var(--gold); font-size: 28px; font-weight: 400; line-height: 1.5; }
+.extra-copy, .extra-empty { color: var(--muted); font-size: 14px; line-height: 2; }
+.extra-empty { padding: 24px; border: 1px dashed rgba(217,187,126,.3); border-radius: 16px; text-align: center; }
+.extra-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.extra-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 46px; max-width: 100%; padding: 10px 18px; border: 1px solid transparent; border-radius: 999px; color: var(--ink); background: linear-gradient(120deg,#f3e0b2,var(--gold)); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; text-align: center; }
+.extra-button.secondary { border-color: rgba(217,187,126,.35); color: var(--cream); background: rgba(255,248,240,.06); }
+.extra-button:disabled { opacity: .5; cursor: default; }
+.extra-button[aria-pressed="true"] { outline: 2px solid var(--gold); outline-offset: 3px; }
+.extra-field { display: grid; gap: 10px; margin: 22px 0; min-width: 0; }
+.extra-field label { color: var(--cream); font-size: 14px; line-height: 1.8; }
+.extra-card input, .extra-card textarea, .extra-card select { width: 100%; max-width: 100%; min-width: 0; padding: 12px; color: var(--cream); background: var(--night); border: 1px solid rgba(217,187,126,.4); border-radius: 12px; font: inherit; color-scheme: dark; }
+.extra-card input[type="file"] { font-size: 12px; }
+.extra-card input::file-selector-button { padding: 8px; margin-inline-end: 10px; border: 0; border-radius: 8px; color: var(--ink); background: var(--gold); }
+.extra-card textarea { resize: vertical; }
+.extra-card :is(button, input, select, textarea, summary):focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.memory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.memory-grid figure { margin: 0; min-width: 0; }
+.memory-photo-button { display: block; width: 100%; padding: 0; border: 1px solid rgba(217,187,126,.35); border-radius: 16px; overflow: hidden; background: var(--night); cursor: zoom-in; }
+.memory-grid img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.memory-grid figcaption { margin-top: 8px; font-size: 14px; line-height: 1.8; }
+.memory-editor-item { display: grid; gap: 8px; padding: 14px 0; border-bottom: 1px solid rgba(217,187,126,.15); }
+.gift-customize { margin-top: 26px; }
+.gift-customize > summary { cursor: pointer; }
+html[data-gift-shared="true"] .gift-customize { display: none; }
+#personalVoiceAudio { display: block; width: 100%; margin-top: 18px; }
+.memory-dialog { width: min(680px, 92vw); max-height: 90vh; padding: 22px; overflow: auto; color: var(--cream); background: var(--night2); border: 1px solid var(--gold); border-radius: 22px; }
+.memory-dialog::backdrop { background: rgba(10,5,12,.82); }
+.memory-dialog img { display: block; max-width: 100%; max-height: 60vh; margin: 20px auto; object-fit: contain; }
+.memory-dialog p { white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 700px) { .extras-grid { grid-template-columns: 1fr; } .memory-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+.affection-wheel-stage {
+  position: relative;
+  width: min(100%, 250px);
+  aspect-ratio: 1;
+  margin: 20px auto 24px;
+  direction: ltr;
+}
+.affection-wheel-pointer {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: -11px;
+  transform: translateX(-50%);
+  color: var(--cream);
+  text-shadow: 0 2px 5px var(--night);
+  font-size: 28px;
+}
+.affection-wheel-disc {
+  position: absolute;
+  inset: 0;
+  border: 5px solid var(--gold);
+  border-radius: 50%;
+  background: conic-gradient(#783c55 0deg 60deg, #482b43 60deg 120deg, #9b6472 120deg 180deg, #573c50 180deg 240deg, #895467 240deg 300deg, #654058 300deg 360deg);
+  transition: transform 2.8s cubic-bezier(.12,.68,.14,1);
+  box-shadow: 0 12px 34px rgba(0,0,0,.25);
+}
+.affection-wheel-disc > span {
+  position: absolute;
+  inset: 0;
+  padding-top: 22px;
+  transform: rotate(var(--wheel-angle));
+  color: var(--cream);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+.affection-wheel-disc > b {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: var(--night);
+  color: var(--gold);
+  font-size: 33px;
+  font-weight: 400;
+}
+.playful-result { min-height: 3.8em; }
+.love-puzzle-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  width: min(100%, 285px);
+  aspect-ratio: 1;
+  margin: 20px auto;
+  direction: ltr;
+}
+.love-puzzle-tile {
+  min-width: 0;
+  padding: 0;
+  border: 1px solid rgba(217,187,126,.45);
+  border-radius: 9px;
+  background-color: var(--plum);
+  background-size: 300% 300%;
+  background-repeat: no-repeat;
+  color: var(--cream);
+  cursor: pointer;
+  position: relative;
+  font: inherit;
+  font-size: clamp(20px, 5vw, 30px);
+}
+.love-puzzle-tile[aria-pressed="true"] {
+  outline: 3px solid var(--gold);
+  outline-offset: 1px;
+  z-index: 1;
+}
+.love-puzzle-tile:focus-visible {
+  outline: 3px solid var(--cream);
+  outline-offset: 1px;
+  z-index: 2;
+}
+.love-puzzle-tile.has-photo > span {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  padding: 1px 5px;
+  border-radius: 6px;
+  color: white;
+  background: rgba(33,23,35,.75);
+  font-size: 12px;
+}
+.little-garden-plot {
+  position: relative;
+  height: 250px;
+  margin: 20px 0 14px;
+  border: 1px solid rgba(217,187,126,.28);
+  border-radius: 20px;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, rgba(110,137,91,.28), transparent 70%), linear-gradient(180deg, rgba(72,43,67,.2), rgba(33,23,35,.65));
+  cursor: crosshair;
+  touch-action: manipulation;
+}
+.little-garden-hint {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  pointer-events: none;
+}
+.little-garden-flower {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  line-height: 1;
+  font-size: 32px;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.2));
+}
+@media (prefers-reduced-motion: reduce) {
+  .affection-wheel-disc { transition: none; }
+}
+
+.affection-reason-host {
+  min-height: 5rem;
+}
+
+.affection-reason {
+  padding: 18px;
+  margin: 18px 0 10px;
+  border: 1px solid rgba(215, 160, 173, 0.35);
+  border-radius: 18px;
+  color: var(--cream);
+  background: rgba(215, 160, 173, 0.08);
+  font-family: var(--serif);
+  font-size: clamp(23px, 4vw, 30px);
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.affection-count {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+.affection-coupons {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.affection-coupon {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px dashed rgba(217, 187, 126, 0.45);
+  border-radius: 16px;
+  background: rgba(217, 187, 126, 0.045);
+}
+
+.affection-coupon[data-selected="true"] {
+  border-style: solid;
+  background: rgba(215, 160, 173, 0.13);
+}
+
+.affection-coupon h4 {
+  margin: 0 0 6px;
+  color: var(--gold);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.affection-coupon p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+@media (max-width: 620px) {
+  .affection-coupon {
+    grid-template-columns: 1fr;
+  }
+  .affection-coupon .extra-button {
+    justify-self: start;
+  }
+}
+
+.moment-date {
+  color: var(--gold);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.moment-message {
+  margin: 18px 0 0;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(217, 187, 126, 0.25);
+  background: rgba(255, 248, 240, 0.045);
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1.9;
+  color: var(--cream);
+  overflow-wrap: anywhere;
+}
+
+.mood-gift-card {
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.mood-gift-card[data-mood="upset"] {
+  background: linear-gradient(145deg, #31314b, #241d30);
+  border-color: #aaa7cc;
+}
+
+.mood-gift-card[data-mood="missing"] {
+  background: linear-gradient(145deg, #583346, #30202f);
+  border-color: var(--rose);
+}
+
+.mood-gift-card[data-mood="happy"] {
+  background: linear-gradient(145deg, #53432e, #30202f);
+  border-color: var(--gold);
+}
+
+.mood-gift-card [aria-pressed="true"],
+.date-gift-card [aria-pressed="true"] {
+  background: var(--gold);
+  color: var(--night);
+  border-color: var(--gold);
+}
+
+.date-gift-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.date-gift-form label {
+  font-size: 13px;
+  color: var(--cream);
+}
+
+.date-gift-form input {
+  min-width: 0;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(217, 187, 126, 0.5);
+  border-radius: 12px;
+  background: var(--night);
+  color: var(--cream);
+  color-scheme: dark;
+  direction: ltr;
+}
+
+.date-countdown {
+  margin: 14px 0 0;
+  color: var(--gold);
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.8;
+}
+
 </style>
 </head>
 <body>
@@ -1479,7 +1861,7 @@ button:focus-visible, input:focus-visible {
       <div class="brand-emblem">♡</div>
       <div class="brand-titles">
         <strong>مجرّتكِ الخاصة</strong>
-        <span>BESPOKE CELESTIAL EDITION · 262</span>
+        <span>شيء صغير لحبيبتي، بكل حبّ 🤍</span>
       </div>
     </div>
 
@@ -1500,9 +1882,16 @@ button:focus-visible, input:focus-visible {
        ==================================================== -->
   <section class="vault-screen" id="vaultScreen">
     <div class="astrolabe-card">
-      <div class="astrolabe-kicker">ROYAL OBSERVATORY VAULT</div>
-      <h1 class="astrolabe-title">مجرّة صُممت من الصفر<span>لعيونكِ أنتِ وبس ♡</span></h1>
-      <p class="astrolabe-sub">النجوم الثلاث فوق تنتظر شيفرتكِ الخاصة عشان ترسم مسارها وتفتح لكِ البوابة… ورّيني شطارتكِ يا ذكية 😌</p>
+      <div class="astrolabe-kicker">إلى حبيبتي 🤍</div>
+      <h1 class="astrolabe-title">مو لازم مناسبة<span>عشان أدلّعكِ ♡</span></h1>
+      <p class="astrolabe-sub">سويت لكِ شيء صغير، يمكن يلطّف يومكِ ويرسم على وجهكِ ابتسامة. خذي راحتكِ، كل اللي هنا لكِ.</p>
+
+      <div class="vault-actions">
+        <button type="button" class="btn-royal btn-gold" id="openGiftBtn">عندي لكِ شيء صغير 💌</button>
+        <button type="button" class="btn-royal btn-glass" id="vaultCodeToggle" aria-expanded="false" aria-controls="vaultCodeGame">أو نلعب لعبة الشيفرة؟ ✨</button>
+      </div>
+
+      <div id="vaultCodeGame" hidden>
 
       <!-- Celestial Astrolabe with 3 Star Nodes -->
       <div class="astrolabe-dial" aria-hidden="true">
@@ -1546,6 +1935,7 @@ button:focus-visible, input:focus-visible {
       </div>
 
       <div class="vault-feedback" id="vaultFeedback" aria-live="polite">اكتبي الأرقام الثلاثة من اللوحة أو الكيبورد ♡</div>
+      </div>
     </div>
   </section>
 
@@ -1557,13 +1947,233 @@ button:focus-visible, input:focus-visible {
     <!-- Hero Welcome -->
     <section class="hero-sanctuary">
       <div class="hero-inner">
-        <div class="royal-pill">✦ انفتحت بوابة المجرّة · أهلاً بملكتها</div>
-        <h2 class="hero-title">هنا عالمٌ صغير<br><span>يدور حول ابتسامتكِ ♡</span></h2>
-        <p class="hero-lead">كل زاوية هنا صُممت من الصفر بنفس الألوان الدافئة اللي تحبينها: مرصد نجوم يرسم قلباً لما تلمسينه، وكتاب مذهّب يروي حكايتكِ، وصيدلية سعادة تصرف لكِ وصفات دلال فورية، وأسطوانة تعزف أغنيتكِ الخاصة.</p>
+        <div class="royal-pill">بدون مناسبة… بس لأنكِ حبيبتي 🤍</div>
+        <h2 class="hero-title" id="giftWelcomeTitle" tabindex="-1">هديتي بسيطة<br><span>والغلا لكِ كبير ♡</span></h2>
+        <p class="hero-lead">ما عندي كلام مرتّب كثير، بس ودي أقول لكِ: أحبكِ، وأحب أشوفكِ مبسوطة. هذي مساحة صغيرة لكِ، خذي منها كلمة حلوة وكم لحظة على مزاجكِ.</p>
         <div class="vault-actions">
+          <button type="button" class="btn-royal btn-gold" id="smileNoteBtn" aria-controls="smileNoteText">خذي كلمة حلوة 🤍</button>
+          <button type="button" class="btn-royal btn-glass" id="hugGiftBtn" aria-controls="hugGiftText">حضن لكِ 🤍</button>
+        </div>
+        <div aria-live="polite" aria-atomic="true">
+          <p class="smile-note" id="smileNoteText" hidden></p>
+        </div>
+        <div aria-live="polite" aria-atomic="true">
+          <p class="smile-note" id="hugGiftText" hidden></p>
+        </div>
+        <div class="vault-actions">
+          <a href="#chapter-surprises" class="btn-royal btn-gold" style="text-decoration:none">المفاجآت العشر 🎁</a>
+          <a href="#chapter-letters" class="btn-royal btn-glass" style="text-decoration:none">رسائل صغيرة لكِ 💌</a>
           <a href="#chapter-stars" class="btn-royal btn-gold" style="text-decoration:none">ابدئي من مرصد النجوم ✦</a>
           <a href="#chapter-sound" class="btn-royal btn-glass" style="text-decoration:none">شغّلي الأسطوانة الذهبية ♫</a>
         </div>
+      </div>
+    </section>
+
+    <!-- Three little letters to open whenever she wants -->
+    <section class="chapter-section" id="chapter-letters" aria-labelledby="openWhenTitle">
+      <div class="chapter-container">
+        <div class="chapter-header">
+          <span class="chapter-tag">ثلاث رسائل، وكل وحدة لوقتها 💌</span>
+          <h2 class="chapter-heading" id="openWhenTitle">افتحيني إذا…</h2>
+          <p class="chapter-desc">مو لازم تفتحينها كلها الحين… اختاري اللي يشبه شعوركِ 🤍</p>
+        </div>
+        <div class="open-when-grid">
+          <details class="open-when-letter" id="letter-tired">
+            <summary><span aria-hidden="true">💌</span> إذا تعبتي</summary>
+            <p>إذا يومكِ ثقيل، خذي لكِ نفس وراحة على مهلكِ. مو لازم تنجزين كل شيء اليوم، أنتِ غالية بكل حالاتكِ 🤍</p>
+          </details>
+          <details class="open-when-letter" id="letter-missing">
+            <summary><span aria-hidden="true">💌</span> إذا اشتقتِ</summary>
+            <p>لو اشتقتِ لي، هذي حضنة صغيرة بالكلام. لكِ غلا كبير، حتى لو هالرسالة صغيرة ♡</p>
+          </details>
+          <details class="open-when-letter" id="letter-laugh">
+            <summary><span aria-hidden="true">💌</span> إذا ودّك تضحكين</summary>
+            <p>كنت بكتب لكِ قصيدة، بس القافية أخذت إجازة 😂 فقلت أجي بنفسي وأقول: أحبكِ يا أحلى من يلخبط كلامي.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="chapter-section gift-extras" id="chapter-surprises" aria-labelledby="surprisesTitle">
+      <div class="chapter-container">
+        <div class="chapter-header">
+          <span class="chapter-tag">كلها لكِ، وعلى راحتكِ 🎁</span>
+          <h2 class="chapter-heading" id="surprisesTitle">عشر مفاجآت صغيرة</h2>
+          <p class="chapter-desc">لفّة حظ، وردة، ذكرى، وكلمة حلوة… اختاري اللي يفرّح قلبكِ اليوم 🤍</p>
+        </div>
+        <div class="extras-grid">
+<article data-gift-feature="affectionWheelCard" class="extra-card" id="affectionWheelCard" aria-labelledby="affectionWheelTitle">
+  <h3 class="extra-title" id="affectionWheelTitle">عجلة الدلع 🎡</h3>
+  <p class="extra-copy">لفّيها وخذي مفاجأة صغيرة… كل لفة فيها كلمة لكِ.</p>
+  <div class="affection-wheel-stage" aria-hidden="true">
+    <span class="affection-wheel-pointer">▼</span>
+    <div class="affection-wheel-disc" id="affectionWheelDisc">
+      <span style="--wheel-angle:30deg">غزل</span>
+      <span style="--wheel-angle:90deg">حضن</span>
+      <span style="--wheel-angle:150deg">وردة</span>
+      <span style="--wheel-angle:210deg">ضحكة</span>
+      <span style="--wheel-angle:270deg">دلع</span>
+      <span style="--wheel-angle:330deg">قلب</span>
+      <b>♡</b>
+    </div>
+  </div>
+  <div class="extra-actions"><button type="button" class="extra-button" id="spinAffectionWheel">لفّي عجلة الدلع ✨</button></div>
+  <p class="extra-copy playful-result" id="affectionWheelResult" aria-live="polite" aria-atomic="true">يا ترى وش بتقول لكِ؟ 🤍</p>
+</article>
+<article data-gift-feature="extra-reasons" class="extra-card" id="extra-reasons" aria-labelledby="reasonsTitle">
+  <h3 class="extra-title" id="reasonsTitle">أسباب أحبكِ 💗</h3>
+  <p class="extra-copy">كل ضغطة تطلع لكِ كلمة من القلب، وللغلا كلام كثير.</p>
+  <div class="affection-reason-host" aria-live="polite" aria-atomic="true">
+    <p class="affection-reason" id="loveReasonText" hidden></p>
+    <p class="affection-count" id="loveReasonCount"></p>
+  </div>
+  <div class="extra-actions">
+    <button type="button" class="extra-button" id="nextLoveReasonBtn" aria-controls="loveReasonText">اقرئي أول سبب ♡</button>
+  </div>
+</article>
+<article data-gift-feature="memoryGiftCard" class="extra-card extra-card-wide" id="memoryGiftCard">
+  <h3 class="extra-title">صندوق ذكرياتنا 📸</h3>
+  <p class="extra-copy">صور صغيرة، وغلا كبير… اضغطي على أي صورة وشوفيها عن قرب.</p>
+  <p class="extra-empty" id="memoriesEmpty">هنا مكان لذكرياتنا الحلوة 🤍</p>
+  <div class="memory-grid" id="memoryGiftGallery"></div>
+</article>
+<article data-gift-feature="voiceGiftCard" class="extra-card" id="voiceGiftCard">
+  <h3 class="extra-title">كلمة بصوتي 🎙️</h3>
+  <p class="extra-copy" id="voiceGiftEmpty">الرسالة الصوتية مو مضافة بعد… ولين أضيفها، لكِ كل هالكلام الحلو 🤍</p>
+  <button type="button" class="extra-button" id="playVoiceGift" disabled>اسمعي رسالتي ♡</button>
+  <audio id="personalVoiceAudio" controls preload="metadata" hidden aria-label="رسالة صوتية من القلب"></audio>
+  <p class="extra-copy" id="voiceGiftStatus" role="status"></p>
+</article>
+<article data-gift-feature="lovePuzzleCard" class="extra-card" id="lovePuzzleCard" aria-labelledby="lovePuzzleTitle">
+  <h3 class="extra-title" id="lovePuzzleTitle">بازل صغير لكِ 🧩</h3>
+  <p class="extra-copy" id="lovePuzzleInstructions">اختاري قطعتين لتبديل مكانهما، ورتّبي القلوب من ١ إلى ٩. لو أضفتي صورة من التخصيص، بتصير هي البازل.</p>
+  <div class="love-puzzle-board" id="lovePuzzleBoard" role="group" aria-label="قطع البازل التسع" aria-describedby="lovePuzzleInstructions"></div>
+  <div class="extra-actions"><button type="button" class="extra-button secondary" id="shuffleLovePuzzle">اخلطي القطع من جديد 🔀</button></div>
+  <p class="extra-copy playful-result" id="lovePuzzleResult" aria-live="polite" aria-atomic="true">كل قطعة لها مكانها… مثل غلاكِ بالقلب ♡</p>
+</article>
+<article data-gift-feature="extra-coupons" class="extra-card" id="extra-coupons" aria-labelledby="couponsTitle">
+  <h3 class="extra-title" id="couponsTitle">كوبونات حب 🎟️</h3>
+  <p class="extra-copy">اختاري كوبونكِ، وبعدها نرتّب وقته سوا 🤍</p>
+  <div class="affection-coupons">
+    <div class="affection-coupon" id="coupon-coffee">
+      <div>
+        <h4><span aria-hidden="true">☕</span> قهوة عليّ</h4>
+        <p>كوبكِ المفضّل وجلسة حلوة معكِ.</p>
+      </div>
+      <button type="button" class="extra-button secondary" id="couponCoffeeBtn" data-coupon="coffee" aria-pressed="false" aria-label="اختيار كوبون قهوة عليّ">أختار هالكوبون</button>
+    </div>
+    <div class="affection-coupon" id="coupon-outing">
+      <div>
+        <h4><span aria-hidden="true">🌷</span> طلعة على اختياركِ</h4>
+        <p>أنتِ تختارين المكان، ونختار الوقت سوا.</p>
+      </div>
+      <button type="button" class="extra-button secondary" id="couponOutingBtn" data-coupon="outing" aria-pressed="false" aria-label="اختيار كوبون طلعة على اختياركِ">أختار هالكوبون</button>
+    </div>
+    <div class="affection-coupon" id="coupon-movie">
+      <div>
+        <h4><span aria-hidden="true">🍿</span> الفيلم على ذوقكِ</h4>
+        <p>اختاري الفيلم، حتى لو شفناه قبل كذا.</p>
+      </div>
+      <button type="button" class="extra-button secondary" id="couponMovieBtn" data-coupon="movie" aria-pressed="false" aria-label="اختيار كوبون الفيلم على ذوقكِ">أختار هالكوبون</button>
+    </div>
+  </div>
+  <p class="affection-count" id="couponSelectionCount" aria-live="polite" aria-atomic="true"></p>
+</article>
+<article data-gift-feature="dateGiftCard" class="extra-card date-gift-card" id="dateGiftCard" aria-labelledby="dateGiftTitle">
+  <span class="extra-eyebrow">فكرة لوقتنا الجاي 🗓️</span>
+  <h3 class="extra-title" id="dateGiftTitle">موعد على ذوقكِ</h3>
+  <p class="extra-copy">اختاري فكرة ووقت يناسبكِ. هذا اقتراح محفوظ عندكِ، ونتفق عليه مع بعض.</p>
+  <div class="extra-actions" role="group" aria-label="فكرة الموعد">
+    <button type="button" class="extra-button secondary" data-date-idea="coffee" aria-pressed="true">قهوة وحكي ☕</button>
+    <button type="button" class="extra-button secondary" data-date-idea="walk" aria-pressed="false">مشي على الهادي 🌙</button>
+    <button type="button" class="extra-button secondary" data-date-idea="dinner" aria-pressed="false">عشاء على ذوقكِ 🍽️</button>
+  </div>
+  <p class="moment-message" id="dateIdeaDescription">قهوة على مزاجكِ، ووقت نسولف فيه بدون استعجال.</p>
+  <form id="dateGiftForm" class="date-gift-form">
+    <label for="dateGiftWhen">متى ودّك يكون؟</label>
+    <input type="datetime-local" id="dateGiftWhen" name="dateGiftWhen" required step="60">
+    <div class="extra-actions">
+      <button type="submit" class="extra-button">احفظي اقتراحكِ 🤍</button>
+      <button type="button" class="extra-button secondary" id="dateGiftClear">مسح الاختيار</button>
+    </div>
+  </form>
+  <div aria-live="polite" aria-atomic="true">
+    <p class="extra-copy" id="dateGiftStatus">اختياركِ يبقى على هذا الجهاز، ولا يُرسل تلقائيًا.</p>
+  </div>
+  <p class="date-countdown" id="dateGiftCountdown" role="timer" aria-live="off" hidden></p>
+</article>
+<article data-gift-feature="littleGardenCard" class="extra-card" id="littleGardenCard" aria-labelledby="littleGardenTitle">
+  <h3 class="extra-title" id="littleGardenTitle">حديقة ورد لكِ 🌷</h3>
+  <p class="extra-copy">المسي أي مكان في الحديقة، أو اضغطي الزر، وازرعي وردة على مزاجكِ.</p>
+  <div class="little-garden-plot" id="littleGardenPlot" aria-hidden="true"><span class="little-garden-hint" id="littleGardenHint">هنا بتكبر باقتكِ 🌱</span></div>
+  <p class="extra-copy" id="littleGardenCount" aria-live="polite" aria-atomic="true"></p>
+  <div class="extra-actions">
+    <button type="button" class="extra-button" id="plantGardenFlower">ازرعي وردة 🌷</button>
+    <button type="button" class="extra-button secondary" id="clearLittleGarden">مسح الورد</button>
+  </div>
+</article>
+<article data-gift-feature="dailyEnvelopeCard" class="extra-card" id="dailyEnvelopeCard" aria-labelledby="dailyEnvelopeTitle">
+  <span class="extra-eyebrow">كل يوم كلمة جديدة 💌</span>
+  <h3 class="extra-title" id="dailyEnvelopeTitle">ظرفكِ اليومي</h3>
+  <p class="extra-copy">ارجعي هنا كل يوم… بتلقين لكِ كلمة حلوة غير، ورسالة اليوم تبقى لكِ طول اليوم.</p>
+  <p class="moment-date" id="dailyEnvelopeDate"></p>
+  <button type="button" class="extra-button" id="dailyEnvelopeBtn" aria-controls="dailyEnvelopeMessage">افتحي ظرف اليوم 💌</button>
+  <div aria-live="polite" aria-atomic="true">
+    <p class="moment-message" id="dailyEnvelopeMessage" hidden></p>
+  </div>
+</article>
+<article data-gift-feature="moodGiftCard" class="extra-card extra-card-wide mood-gift-card" id="moodGiftCard" aria-labelledby="moodGiftTitle">
+  <span class="extra-eyebrow">على مزاجكِ ☁️</span>
+  <h3 class="extra-title" id="moodGiftTitle">كيف قلبكِ اليوم؟</h3>
+  <p class="extra-copy">كل شعور له مكان هنا، خذي الكلام اللي يناسبكِ.</p>
+  <div class="extra-actions" role="group" aria-label="اختاري شعوركِ">
+    <button type="button" class="extra-button secondary" data-gift-mood="upset" aria-pressed="false">متضايقة ☁️</button>
+    <button type="button" class="extra-button secondary" data-gift-mood="missing" aria-pressed="false">مشتاقة 🤍</button>
+    <button type="button" class="extra-button secondary" data-gift-mood="happy" aria-pressed="false">مبسوطة ☀️</button>
+  </div>
+  <div aria-live="polite" aria-atomic="true">
+    <p class="moment-message" id="moodGiftMessage" hidden></p>
+  </div>
+</article>
+        </div>
+        <p class="extra-copy" id="giftExtrasStatus" role="status"></p>
+<details class="gift-customize extra-card" id="gift-customize">
+  <summary class="extra-title">جهّز هديتك بلمستك 💝</summary>
+  <p class="extra-copy">أضف صوركم وصوتك وكلامك، وبعدها حمّل نسخة الهدية الجاهزة. الصور والصوت تبقى في متصفحك، وتدخل ضمن النسخة اللي تحمّلها.</p>
+  <div class="extra-field">
+    <label for="giftMemoryFiles">صور الذكريات (حتى 6 صور، JPEG أو PNG أو WebP)</label>
+    <input type="file" id="giftMemoryFiles" accept="image/jpeg,image/png,image/webp" multiple>
+    <div id="giftMemoryEditor"></div>
+  </div>
+  <div class="extra-field">
+    <label for="giftVoiceFile">أضف تسجيلك الصوتي (حتى 3 ميغابايت)</label>
+    <input type="file" id="giftVoiceFile" accept="audio/*">
+    <button type="button" class="extra-button secondary" id="removeGiftVoice" hidden>إزالة التسجيل</button>
+  </div>
+  <div class="extra-field">
+    <label for="giftPuzzleFile">صورة البازل (أو نستخدم أول صورة من الذكريات)</label>
+    <input type="file" id="giftPuzzleFile" accept="image/jpeg,image/png,image/webp">
+    <button type="button" class="extra-button secondary" id="removeGiftPuzzle" hidden>استخدام أول ذكرى للبازل</button>
+  </div>
+  <div class="extra-field">
+    <label for="giftReasonsInput">أسباب تحبها بكلامك، كل سبب بسطر (حتى 30 سببًا)</label>
+    <textarea id="giftReasonsInput" rows="4" maxlength="7500" placeholder="أحب طيبتكِ&#10;أحب ضحكتكِ"></textarea>
+    <button type="button" class="extra-button secondary" id="saveGiftReasons">حفظ كلامي</button>
+  </div>
+  <div class="extra-actions">
+    <button type="button" class="extra-button" id="downloadPersonalGift">تحميل نسخة الهدية 💌</button>
+  </div>
+  <p class="extra-copy">النسخة ملف HTML يضم صورك وتسجيلك وكلامك، ويمكن فتحه بالمتصفح أو رفعه لموقعك. تنزيله ما ينشره على الإنترنت.</p>
+  <p class="extra-copy" id="giftCustomizeStatus" role="status"></p>
+</details>
+<dialog class="memory-dialog" id="giftMemoryDialog" aria-labelledby="giftMemoryDialogTitle">
+  <h3 id="giftMemoryDialogTitle">ذكرى من القلب 🤍</h3>
+  <form method="dialog"><button class="extra-button secondary" type="submit">إغلاق الصورة</button></form>
+  <img id="giftMemoryLarge" alt="">
+  <p id="giftMemoryLargeCaption"></p>
+</dialog>
+
       </div>
     </section>
 
@@ -1946,6 +2556,7 @@ button:focus-visible, input:focus-visible {
 
   <!-- Floating Bottom Chapter Dock (Visible when unlocked) -->
   <nav class="floating-dock" id="floatingDock" hidden aria-label="التنقل السريع بين الفصول">
+    <a href="#chapter-surprises" class="dock-link">🎁 مفاجآت</a>
     <a href="#chapter-stars" class="dock-link">✦ المرصد</a>
     <a href="#chapter-book" class="dock-link">📖 الكتاب</a>
     <a href="#chapter-apothecary" class="dock-link">🧪 الصيدلية</a>
@@ -2045,8 +2656,7 @@ button:focus-visible, input:focus-visible {
   }
 
   // Floating Hearts/Sparkles Burst
-  function burstSymbols(count = 16) {
-    const icons = ['♡', '♥', '✦', '✧'];
+  function burstSymbols(count = 16, icons = ['♡', '♥', '✦', '✧']) {
     for (let i = 0; i < count; i++) {
       const el = document.createElement('span');
       el.className = 'floating-symbol';
@@ -2146,15 +2756,50 @@ button:focus-visible, input:focus-visible {
   }
 
   function unlockGalaxyExperience() {
+    if ($('#vaultScreen').style.display === 'none') return;
     $('#vaultScreen').style.display = 'none';
     $('#galaxyExperience').classList.add('unlocked');
     $('#floatingDock').hidden = false;
+    $('#giftWelcomeTitle').focus({ preventScroll: true });
     burstSymbols(26);
     boostSmileMeter(15);
     loadYoutubeTrack(true, 0);
-    showToast('انفتحت بوابة مجرّتكِ الخاصة… كل تفصيلة هنا لكِ ♡');
+    showToast('هذي لكِ يا حبيبتي… بكل حبّ 🤍');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  $('#openGiftBtn').addEventListener('click', unlockGalaxyExperience);
+
+  $('#vaultCodeToggle').addEventListener('click', () => {
+    const game = $('#vaultCodeGame');
+    game.hidden = !game.hidden;
+    $('#vaultCodeToggle').setAttribute('aria-expanded', String(!game.hidden));
+  });
+
+  const smileNotes = [
+    'لو أقدر أرسل لكِ حضن مع هالزر، كان وصل قبل الكلام 🤍',
+    'تنبيه لطيف: فيه شخص يبتسم من يسمع اسمكِ. إي، أنا 😌',
+    'حتى بيومكِ العادي، أنتِ عندي شيء مميّز ♡',
+    'أحب ضحكتكِ، وأحبكِ بكل حالاتكِ 🤍'
+  ];
+  let smileNoteIndex = 0;
+  $('#smileNoteBtn').addEventListener('click', () => {
+    const note = $('#smileNoteText');
+    note.hidden = false;
+    note.textContent = smileNotes[smileNoteIndex];
+    smileNoteIndex = (smileNoteIndex + 1) % smileNotes.length;
+    $('#smileNoteBtn').textContent = 'وعندي لكِ كلمة ثانية 🤍';
+    burstSymbols(8);
+  });
+
+  $('#hugGiftBtn').addEventListener('click', () => {
+    const note = $('#hugGiftText');
+    note.hidden = false;
+    note.textContent = 'لو كنت جنبكِ، كان هذي حضنة بدل الزر 🤍';
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      burstSymbols(20, ['♡', '♥', '🤍']);
+    }
+  });
 
   $$('.key-btn[data-digit]').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -2177,7 +2822,7 @@ button:focus-visible, input:focus-visible {
 
   // Physical Keyboard support on Vault Screen
   window.addEventListener('keydown', e => {
-    if ($('#vaultScreen').style.display === 'none') return;
+    if ($('#vaultScreen').style.display === 'none' || $('#vaultCodeGame').hidden) return;
     if (e.key >= '0' && e.key <= '9') {
       if (enteredDigits.length < 3) {
         enteredDigits.push(e.key);
@@ -2579,10 +3224,9 @@ button:focus-visible, input:focus-visible {
      ========================================== */
   const finalHeartfeltMessage =
     'يا حبيبتي،\n\n' +
-    'أبيكِ تعرفين إن وجودكِ في حياتي مو شيء عادي، وإنكِ تستاهلين أياماً تشبه لطف قلبكِ، وضحكات تجي من غير ترتيب، وراحة بال ترافقكِ في كل خطوة.\n\n' +
-    'مو لازم تكونين قوية ومثالية طول الوقت؛ خذي وقتكِ، وافرحي بالتفاصيل الصغيرة، وتذكّري دائماً إن لكِ مكاناً ثابتاً وغاليًا ما يزاحمكِ فيه أحد.\n\n' +
-    'صممت لكِ هالمجرّة من الصفر بألوانكِ اللي تحبينها عشان أقول لكِ إن ابتسامتكِ تستاهل كل محاولة — حتى لو كانت المحاولة مرصد نجوم وصيدلية وأسطوانة في ملف كود 😂🤍\n\n' +
-    'دمتِ لقلبي أجمل وألطف تفصيلة ♡';
+    'ما فيه مناسبة اليوم، بس طريتي على بالي وقلت أسوي لكِ شيء صغير يفرّحكِ.\n\n' +
+    'أحبكِ، وأتمنى يكون يومكِ خفيف على قلبكِ. وإذا هالهدية طلّعت منكِ ولو ابتسامة صغيرة، فهذا أحلى شيء عندي.\n\n' +
+    'دمتِ لقلبي حبيبتي، بكل أيامكِ 🤍';
 
   let sealTypingTimer = null;
   $('#breakWaxSealBtn').addEventListener('click', () => {
@@ -2613,9 +3257,9 @@ button:focus-visible, input:focus-visible {
   const cardQuotes = [
     {
       subtitle: '✦  رسالة خاصة من القلب · 262  ✦',
-      heading: 'مجرّتكِ الخاصة يا حبيبتي ♡',
-      body: 'أبيكِ تعرفين إن وجودكِ يستحق التقدير، وإنكِ تستاهلين أياماً فيها راحة وطمأنينة وضحك من قلب.\n\nكوني لطيفة مع نفسكِ دائماً، وتذكّري إن ابتسامتكِ تستاهل كل محاولة — حتى لو كانت مجرّة كاملة مبنية بالكود لأجل عيونكِ 🤍',
-      footer: 'من شخص يتمنى لكِ الخير والفرح دائماً ♡'
+      heading: 'لحبيبتي، بدون مناسبة 🤍',
+      body: 'مو لازم مناسبة عشان أقول لكِ أحبكِ.\n\nهذي هدية صغيرة، ومعها أمنية إن يومكِ يكون خفيف على قلبكِ ومليان أشياء حلوة تشبهكِ.',
+      footer: 'هديتي بسيطة، والغلا لكِ كبير ♡'
     },
     {
       subtitle: '✦  ميثاق العرش الأبدي · 262  ✦',
@@ -2791,6 +3435,684 @@ button:focus-visible, input:focus-visible {
   });
 
 })();
+</script>
+<script type="application/json" id="giftPersonalData">{"version":1,"memories":[],"reasons":[],"voice":null,"puzzleImage":null}</script>
+<script>
+(() => {
+  'use strict';
+  const prefix = 'habibti.extra.v1.';
+  const read = (key, fallback) => {
+    try { const raw = localStorage.getItem(prefix + key); return raw === null ? fallback : JSON.parse(raw); }
+    catch (_) { return fallback; }
+  };
+  const write = (key, value) => {
+    try { localStorage.setItem(prefix + key, JSON.stringify(value)); return true; }
+    catch (_) { return false; }
+  };
+  const $ = selector => document.querySelector(selector);
+  const imageData = value => typeof value === 'string' && value.length < 2200000 && /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(value);
+  const audioData = value => typeof value === 'string' && value.length < 4500000 && /^data:audio\/[a-z0-9.+-]+;base64,[A-Za-z0-9+/=]+$/i.test(value);
+  const clean = value => {
+    const source = value && typeof value === 'object' ? value : {};
+    return {
+      version: 1,
+      memories: Array.isArray(source.memories) ? source.memories.filter(item => item && imageData(item.image)).slice(0, 6).map(item => ({ image: item.image, caption: typeof item.caption === 'string' ? item.caption.slice(0, 240) : '' })) : [],
+      voice: audioData(source.voice) ? source.voice : null,
+      reasons: Array.isArray(source.reasons) ? source.reasons.filter(item => typeof item === 'string' && item.trim()).slice(0, 30).map(item => item.trim().slice(0, 240)) : [],
+      puzzleImage: imageData(source.puzzleImage) ? source.puzzleImage : null,
+      customPuzzle: source.customPuzzle === true
+    };
+  };
+  let embedded = {};
+  try { embedded = JSON.parse($('#giftPersonalData').textContent); } catch (_) { /* use safe empty data */ }
+  const shared = document.documentElement.dataset.giftShared === 'true';
+  const data = clean(shared ? embedded : read('personal', embedded));
+  let sourceHTML = '';
+  let uploadBusy = false;
+  let downloadURL;
+  function announce(message) { $('#giftExtrasStatus').textContent = message; }
+  function celebrate(count = 12) {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    for (let i = 0; i < Math.min(30, count); i++) {
+      const heart = document.createElement('span');
+      heart.className = 'floating-symbol';
+      heart.textContent = i % 2 ? '♡' : '♥';
+      heart.setAttribute('aria-hidden', 'true');
+      heart.style.left = Math.random() * 94 + 'vw';
+      heart.style.fontSize = (18 + Math.random() * 16) + 'px';
+      document.body.append(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+  }
+  window.GiftExtras = { data, read, write, announce, celebrate };
+
+  function editorStatus(text) { $('#giftCustomizeStatus').textContent = text; }
+  function savePersonal(message = 'حفظنا لمستكِ 🤍') {
+    if (!data.customPuzzle) data.puzzleImage = data.memories[0]?.image || null;
+    const saved = write('personal', data);
+    renderMemories();
+    document.dispatchEvent(new CustomEvent('giftpersonalchange'));
+    editorStatus(saved ? message : 'الإضافة جاهزة هنا، لكن المتصفح ما قدر يحفظها. حمّل نسخة الهدية قبل إغلاق الصفحة.');
+  }
+  function renderMemories() {
+    const gallery = $('#memoryGiftGallery');
+    gallery.replaceChildren();
+    $('#memoriesEmpty').hidden = data.memories.length > 0;
+    data.memories.forEach((memory, index) => {
+      const figure = document.createElement('figure');
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'memory-photo-button';
+      button.setAttribute('aria-label', 'عرض الذكرى ' + (index + 1));
+      const image = document.createElement('img');
+      image.src = memory.image;
+      image.alt = memory.caption || 'ذكرى من القلب ' + (index + 1);
+      image.loading = 'lazy';
+      button.append(image);
+      button.addEventListener('click', () => {
+        $('#giftMemoryLarge').src = memory.image;
+        $('#giftMemoryLarge').alt = image.alt;
+        $('#giftMemoryLargeCaption').textContent = memory.caption;
+        $('#giftMemoryDialog').showModal();
+      });
+      const caption = document.createElement('figcaption');
+      caption.textContent = memory.caption || 'ذكرى غالية 🤍';
+      figure.append(button, caption);
+      gallery.append(figure);
+    });
+  }
+  function renderMemoryEditor() {
+    const editor = $('#giftMemoryEditor');
+    editor.replaceChildren();
+    data.memories.forEach((memory, index) => {
+      const row = document.createElement('div');
+      row.className = 'memory-editor-item';
+      const label = document.createElement('label');
+      label.htmlFor = 'giftCaption' + index;
+      label.textContent = 'كلامك على الصورة ' + (index + 1);
+      const caption = document.createElement('input');
+      caption.id = label.htmlFor;
+      caption.maxLength = 240;
+      caption.value = memory.caption;
+      caption.addEventListener('change', () => { memory.caption = caption.value.trim(); savePersonal(); });
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'extra-button secondary';
+      remove.textContent = 'حذف الصورة ' + (index + 1);
+      remove.addEventListener('click', () => {
+        data.memories.splice(index, 1);
+        savePersonal('حذفنا الصورة.');
+        renderMemoryEditor();
+        $('#giftMemoryFiles').focus();
+      });
+      row.append(label, caption, remove);
+      editor.append(row);
+    });
+  }
+  function renderVoice() {
+    const audio = $('#personalVoiceAudio');
+    audio.pause();
+    audio.removeAttribute('src');
+    if (data.voice) audio.src = data.voice;
+    audio.load();
+    audio.hidden = !data.voice;
+    $('#playVoiceGift').disabled = !data.voice;
+    $('#voiceGiftEmpty').hidden = Boolean(data.voice);
+    $('#removeGiftVoice').hidden = !data.voice;
+    $('#playVoiceGift').textContent = 'اسمعي رسالتي ♡';
+    $('#voiceGiftStatus').textContent = '';
+  }
+  async function fileAsData(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(new Error('ما قدرنا نقرأ الملف، جرّب تختاره مرة ثانية.'));
+      reader.readAsDataURL(file);
+    });
+  }
+  async function resizePhoto(file) {
+    if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 10 * 1024 * 1024) {
+      throw new Error('اختر صورة JPEG أو PNG أو WebP، حجمها أقل من 10 ميغابايت.');
+    }
+    let bitmap;
+    try {
+      bitmap = await createImageBitmap(file);
+      const scale = Math.min(1, 960 / Math.max(bitmap.width, bitmap.height));
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+      canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+      const context = canvas.getContext('2d');
+      context.fillStyle = '#fff8f0';
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+      return canvas.toDataURL('image/jpeg', .8);
+    } catch (_) { throw new Error('ما قدرنا نفتح الصورة. جرّب صورة ثانية.'); }
+    finally { bitmap?.close(); }
+  }
+  async function upload(action) {
+    if (uploadBusy) { editorStatus('انتظر لحظة لين تكتمل الإضافة الحالية.'); return; }
+    uploadBusy = true;
+    $('#downloadPersonalGift').disabled = true;
+    try { editorStatus('لحظة، نجهّز الإضافة…'); await action(); }
+    catch (error) { editorStatus(error.message); }
+    finally { uploadBusy = false; $('#downloadPersonalGift').disabled = false; }
+  }
+  function saveReasons() {
+    data.reasons = $('#giftReasonsInput').value.split('\n').map(line => line.trim()).filter(Boolean).slice(0, 30).map(line => line.slice(0, 240));
+    $('#giftReasonsInput').value = data.reasons.join('\n');
+  }
+  function downloadGift() {
+    if (uploadBusy) return;
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+    saveReasons();
+    savePersonal();
+    const snapshot = new DOMParser().parseFromString(sourceHTML, 'text/html');
+    snapshot.documentElement.dataset.giftShared = 'true';
+    snapshot.querySelector('#giftPersonalData').textContent = JSON.stringify(clean(data)).replace(/</g, String.fromCharCode(92) + 'u003c');
+    const file = new Blob(['<!DOCTYPE html>\n' + snapshot.documentElement.outerHTML], { type: 'text/html;charset=utf-8' });
+    if (downloadURL) URL.revokeObjectURL(downloadURL);
+    downloadURL = URL.createObjectURL(file);
+    const link = document.createElement('a');
+    link.href = downloadURL;
+    link.download = 'هدية_لحبيبتي.html';
+    document.body.append(link);
+    link.click();
+    link.remove();
+    editorStatus('نسخة الهدية جاهزة، وتضم الصور والصوت والكلام اللي أضفته. ما نُشرت على الإنترنت.');
+  }
+  function initialize() {
+    sourceHTML = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+    renderMemories();
+    renderMemoryEditor();
+    renderVoice();
+    $('#giftReasonsInput').value = data.reasons.join('\n');
+    $('#removeGiftPuzzle').hidden = !data.customPuzzle;
+    $('#giftMemoryFiles').addEventListener('change', event => {
+      const files = Array.from(event.target.files);
+      upload(async () => {
+        if (files.length + data.memories.length > 6) throw new Error('نقدر نضيف 6 صور. احذف صورة قديمة إذا تبي تبدّلها.');
+        const additions = [];
+        for (const file of files) additions.push({ image: await resizePhoto(file), caption: '' });
+        data.memories.push(...additions);
+        savePersonal('أضفنا الصور. تقدر تكتب تعليقك تحت كل وحدة.');
+        renderMemoryEditor();
+      }).finally(() => { event.target.value = ''; });
+    });
+    $('#giftVoiceFile').addEventListener('change', event => {
+      const file = event.target.files[0];
+      if (!file) return;
+      upload(async () => {
+        if (!file.type.startsWith('audio/') || file.size > 3 * 1024 * 1024) throw new Error('اختر تسجيلًا صوتيًا حجمه أقل من 3 ميغابايت.');
+        const voice = await fileAsData(file);
+        if (!audioData(voice)) throw new Error('صيغة التسجيل مو مدعومة. جرّب MP3 أو WAV.');
+        data.voice = voice;
+        renderVoice();
+        savePersonal('أضفنا صوتك. جرّب تشغيله من بطاقة الرسالة الصوتية 🤍');
+      }).finally(() => { event.target.value = ''; });
+    });
+    $('#giftPuzzleFile').addEventListener('change', event => {
+      const file = event.target.files[0];
+      if (!file) return;
+      upload(async () => {
+        data.puzzleImage = await resizePhoto(file);
+        data.customPuzzle = true;
+        $('#removeGiftPuzzle').hidden = false;
+        savePersonal('أضفنا صورة البازل.');
+      }).finally(() => { event.target.value = ''; });
+    });
+    $('#removeGiftPuzzle').addEventListener('click', () => {
+      data.customPuzzle = false;
+      $('#removeGiftPuzzle').hidden = true;
+      savePersonal('البازل يستخدم أول صورة من الذكريات، أو قلوب إذا ما فيه صور.');
+    });
+    $('#removeGiftVoice').addEventListener('click', () => { data.voice = null; renderVoice(); savePersonal('حذفنا التسجيل.'); });
+    $('#saveGiftReasons').addEventListener('click', () => { saveReasons(); savePersonal('حفظنا كلامك 🤍'); });
+    $('#downloadPersonalGift').addEventListener('click', downloadGift);
+    const audio = $('#personalVoiceAudio');
+    $('#playVoiceGift').addEventListener('click', async () => {
+      if (!data.voice) return;
+      if (!audio.paused) { audio.pause(); return; }
+      try { await audio.play(); }
+      catch (_) { $('#voiceGiftStatus').textContent = 'ما قدر المتصفح يشغّل التسجيل. جرّب ملف MP3 أو WAV.'; }
+    });
+    audio.addEventListener('play', () => { $('#playVoiceGift').textContent = 'إيقاف الرسالة مؤقتًا ♡'; });
+    audio.addEventListener('pause', () => { $('#playVoiceGift').textContent = 'اسمعي رسالتي ♡'; });
+    audio.addEventListener('error', () => { if (data.voice) $('#voiceGiftStatus').textContent = 'صيغة التسجيل ما اشتغلت على هالمتصفح. جرّب MP3 أو WAV.'; });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialize, { once: true });
+  else initialize();
+})();
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+(() => {
+  'use strict';
+  const G = window.GiftExtras;
+  if (!G) return;
+  const $ = selector => document.querySelector(selector);
+  const arabic = n => n.toLocaleString('ar');
+  // Rejection sampling keeps each surprise equally likely.
+  function randomInt(limit) {
+    const values = new Uint32Array(1);
+    const ceiling = Math.floor(4294967296 / limit) * limit;
+    do { crypto.getRandomValues(values); } while (values[0] >= ceiling);
+    return values[0] % limit;
+  }
+
+  const surprises = [
+    'غزل لكِ: حتى يومكِ العادي، أنتِ عندي شيء مميّز ♡',
+    'حضن لكِ: لو أقدر أحطّه داخل الشاشة، كان وصل الحين 🤍',
+    'وردة لكِ: هذي وردة صغيرة من شخص يحبكِ 🌷',
+    'ضحكة لكِ: كنت بكتب بيت شعر… بس البيت طلب إجازة 😂',
+    'دلع لكِ: خذي دقيقة لكِ، وشيء تحبينه، وكلمة: أحبكِ 🤍',
+    'قلب لكِ: ♡ هذا صغير بالشاشة، وغلاكِ أكبر منه بكثير.'
+  ];
+  let angle = 0;
+  let spinning = false;
+  $('#spinAffectionWheel').addEventListener('click', () => {
+    if (spinning) return;
+    spinning = true;
+    const button = $('#spinAffectionWheel');
+    button.disabled = true;
+    button.textContent = 'تدور لكِ… ✨';
+    $('#affectionWheelResult').textContent = 'لحظة… المفاجأة بالطريق ♡';
+    const chosen = randomInt(surprises.length);
+    const target = (360 - (chosen * 60 + 30)) % 360;
+    const current = ((angle % 360) + 360) % 360;
+    angle += 1440 + (target - current + 360) % 360;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    $('#affectionWheelDisc').style.transform = `rotate(${angle}deg)`;
+    function finish() {
+      $('#affectionWheelResult').textContent = surprises[chosen];
+      button.disabled = false;
+      button.textContent = 'لفة ثانية؟ 🎡';
+      spinning = false;
+      G.celebrate(10);
+    }
+    if (reduced) finish();
+    else setTimeout(finish, 2900);
+  });
+
+  let pieces = [];
+  let selected = null;
+  let solved = false;
+  function usablePhoto() {
+    const photo = G.data.puzzleImage;
+    return typeof photo === 'string' && /^data:image\/(?:jpeg|png|webp);base64,/.test(photo) ? photo : '';
+  }
+  let photo = usablePhoto();
+  const board = $('#lovePuzzleBoard');
+  function renderPuzzle(focusIndex) {
+    board.replaceChildren();
+    pieces.forEach((piece, index) => {
+      const tile = document.createElement('button');
+      tile.type = 'button';
+      tile.className = 'love-puzzle-tile';
+      tile.dataset.piece = String(piece);
+      tile.dataset.position = String(index);
+      tile.setAttribute('aria-pressed', String(index === selected));
+      tile.setAttribute('aria-label', `القطعة ${arabic(piece + 1)}، المكان ${arabic(index + 1)}`);
+      const label = document.createElement('span');
+      label.textContent = photo ? arabic(piece + 1) : `${['♡', '♥', '🤍'][piece % 3]} ${arabic(piece + 1)}`;
+      label.setAttribute('aria-hidden', 'true');
+      tile.appendChild(label);
+      if (photo) {
+        tile.classList.add('has-photo');
+        tile.style.backgroundImage = `url("${photo}")`;
+        tile.style.backgroundPosition = `${(piece % 3) * 50}% ${Math.floor(piece / 3) * 50}%`;
+      }
+      tile.addEventListener('click', () => {
+        if (solved) return;
+        if (selected === null) {
+          selected = index;
+          $('#lovePuzzleResult').textContent = 'اختاري قطعة ثانية عشان يتبدّلون ♡';
+        } else if (selected === index) {
+          selected = null;
+          $('#lovePuzzleResult').textContent = 'اختاري أي قطعتين لتبديل مكانهما.';
+        } else {
+          [pieces[selected], pieces[index]] = [pieces[index], pieces[selected]];
+          selected = null;
+          solved = pieces.every((value, position) => value === position);
+          $('#lovePuzzleResult').textContent = solved ? 'اكتمل البازل! وكل القطع تقول: أحبكِ 🤍' : 'حلو! كم قطعة وبنشوفها كاملة ♡';
+          if (solved) G.celebrate(18);
+        }
+        renderPuzzle(index);
+      });
+      board.appendChild(tile);
+    });
+    if (Number.isInteger(focusIndex)) board.children[focusIndex].focus({ preventScroll: true });
+  }
+  function shufflePuzzle() {
+    pieces = Array.from({ length: 9 }, (_, i) => i);
+    for (let i = pieces.length - 1; i > 0; i--) {
+      const j = randomInt(i + 1);
+      [pieces[i], pieces[j]] = [pieces[j], pieces[i]];
+    }
+    if (pieces.every((value, index) => value === index)) [pieces[0], pieces[1]] = [pieces[1], pieces[0]];
+    selected = null;
+    solved = false;
+    $('#lovePuzzleInstructions').textContent = photo
+      ? 'اختاري قطعتين لتبديل مكانهما، ورتّبي الصورة من ١ إلى ٩، من اليسار لليمين.'
+      : 'اختاري قطعتين لتبديل مكانهما، ورتّبي القلوب من ١ إلى ٩، من اليسار لليمين. لو أضفتي صورة من التخصيص، بتصير هي البازل.';
+    $('#lovePuzzleResult').textContent = 'كل قطعة لها مكانها… مثل غلاكِ بالقلب ♡';
+    renderPuzzle();
+  }
+  $('#shuffleLovePuzzle').addEventListener('click', shufflePuzzle);
+  document.addEventListener('giftpersonalchange', () => {
+    const newPhoto = usablePhoto();
+    if (newPhoto !== photo) {
+      photo = newPhoto;
+      shufflePuzzle();
+    }
+  });
+  shufflePuzzle();
+
+  const flowers = ['🌷', '🌹', '🌼', '🌸', '🌻'];
+  const savedGarden = G.read('gardenFlowers', []);
+  let garden = (Array.isArray(savedGarden) ? savedGarden : []).filter(flower => (
+    flower && Number.isFinite(flower.x) && flower.x >= 5 && flower.x <= 95 &&
+    Number.isFinite(flower.y) && flower.y >= 20 && flower.y <= 92 &&
+    Number.isInteger(flower.kind) && flower.kind >= 0 && flower.kind < flowers.length
+  )).slice(0, 30);
+  const plot = $('#littleGardenPlot');
+  function renderGarden() {
+    plot.querySelectorAll('.little-garden-flower').forEach(flower => flower.remove());
+    garden.forEach(flower => {
+      const bloom = document.createElement('span');
+      bloom.className = 'little-garden-flower';
+      bloom.textContent = flowers[flower.kind];
+      bloom.style.left = `${flower.x}%`;
+      bloom.style.top = `${flower.y}%`;
+      plot.appendChild(bloom);
+    });
+    $('#littleGardenHint').hidden = garden.length > 0;
+    $('#littleGardenCount').textContent = garden.length === 30
+      ? 'اكتملت باقتكِ بثلاثين وردة 🌷 تقدرين تبدئين حديقة جديدة متى حبيتي.'
+      : `في حديقتكِ ${arabic(garden.length)} من ٣٠ وردة 🌷`;
+    $('#plantGardenFlower').disabled = garden.length >= 30;
+    $('#clearLittleGarden').disabled = garden.length === 0;
+  }
+  function plant(x, y) {
+    if (garden.length >= 30) return;
+    garden.push({ x: Math.max(5, Math.min(95, x)), y: Math.max(20, Math.min(92, y)), kind: randomInt(flowers.length) });
+    const retained = G.write('gardenFlowers', garden);
+    renderGarden();
+    if (!retained) G.announce('زرعنا وردتكِ هنا، لكن جهازكِ ما قدر يحفظ الحديقة للمرة الجاية.');
+  }
+  plot.addEventListener('click', event => {
+    const bounds = plot.getBoundingClientRect();
+    if (bounds.width > 0 && bounds.height > 0) plant((event.clientX - bounds.left) / bounds.width * 100, (event.clientY - bounds.top) / bounds.height * 100);
+  });
+  $('#plantGardenFlower').addEventListener('click', () => plant(8 + randomInt(85), 32 + randomInt(57)));
+  $('#clearLittleGarden').addEventListener('click', () => {
+    garden = [];
+    const retained = G.write('gardenFlowers', garden);
+    renderGarden();
+    if (!retained) G.announce('مسحنا الورد هنا، لكن جهازكِ ما قدر يحفظ التغيير للمرة الجاية.');
+  });
+  renderGarden();
+})();
+
+}, { once: true });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+(() => {
+  'use strict';
+  const gift = window.GiftExtras;
+  if (!gift) return;
+
+  const defaults = [
+    'أحبكِ لأنكِ أنتِ… مو لازم يكون فيه سبب ثاني 🤍',
+    'أحب إن كلمة «حبيبتي» صارت تعنيكِ أنتِ ♡',
+    'أحب إن لكِ مكان بقلبي ما يشبه أحد.',
+    'أحبكِ في أيامكِ الخفيفة، وأيامكِ اللي تحتاج راحة.',
+    'أحب إن فيه أشياء صغيرة تخلّيني أفكّر فيكِ.',
+    'أحبكِ مثل ما أنتِ، بكل تفاصيلكِ 🤍',
+    'أحب فكرة إن هالهدية البسيطة بتوصل لكِ منّي.',
+    'أحبكِ… وهذي كلمة تستاهل أقولها لكِ أكثر من مرة ♡'
+  ];
+  let reasons = [];
+  let nextIndex = 0;
+  const reasonText = document.getElementById('loveReasonText');
+  const reasonCount = document.getElementById('loveReasonCount');
+  const nextButton = document.getElementById('nextLoveReasonBtn');
+  const digits = new Intl.NumberFormat('ar');
+
+  function refreshReasons() {
+    const supplied = gift.data && gift.data.reasons;
+    const cleaned = Array.isArray(supplied)
+      ? supplied.filter(value => typeof value === 'string').map(value => value.trim()).filter(Boolean)
+      : [];
+    // Repeated custom lines are still one reason, so each cycle stays distinct.
+    reasons = Array.from(new Set(cleaned.length ? cleaned : defaults));
+    nextIndex = 0;
+    reasonText.hidden = true;
+    reasonText.textContent = '';
+    reasonCount.textContent = '';
+    nextButton.textContent = 'اقرئي أول سبب ♡';
+  }
+
+  nextButton.addEventListener('click', () => {
+    reasonText.hidden = false;
+    reasonText.textContent = reasons[nextIndex];
+    reasonCount.textContent = `كلمة ${digits.format(nextIndex + 1)} من ${digits.format(reasons.length)}`;
+    nextIndex = (nextIndex + 1) % reasons.length;
+    nextButton.textContent = 'وعندي سبب ثاني ♡';
+    gift.celebrate(6);
+  });
+  document.addEventListener('giftpersonalchange', refreshReasons);
+  refreshReasons();
+
+  const couponNames = {
+    coffee: 'قهوة عليّ',
+    outing: 'طلعة على اختياركِ',
+    movie: 'الفيلم على ذوقكِ'
+  };
+  const storageKey = 'affection-coupons-v1';
+  const stored = gift.read(storageKey, {});
+  const validStored = stored && typeof stored === 'object' && !Array.isArray(stored) ? stored : {};
+  const selected = Object.fromEntries(Object.keys(couponNames).map(key => [key, validStored[key] === true]));
+  const couponButtons = Array.from(document.querySelectorAll('#extra-coupons [data-coupon]'));
+  const couponCount = document.getElementById('couponSelectionCount');
+
+  function renderCoupons() {
+    couponButtons.forEach(button => {
+      const key = button.dataset.coupon;
+      const chosen = selected[key];
+      button.setAttribute('aria-pressed', String(chosen));
+      button.setAttribute('aria-label', `${chosen ? 'إلغاء اختيار' : 'اختيار'} كوبون ${couponNames[key]}`);
+      button.textContent = chosen ? 'إلغاء الاختيار ✓' : 'أختار هالكوبون';
+      button.closest('.affection-coupon').dataset.selected = String(chosen);
+    });
+    const count = Object.values(selected).filter(Boolean).length;
+    couponCount.textContent = count
+      ? `اخترتِ ${digits.format(count)} من ${digits.format(couponButtons.length)} كوبونات. نرتّب وقتها سوا 🤍`
+      : 'الكوبونات بانتظار اختياركِ ♡';
+  }
+
+  couponButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const key = button.dataset.coupon;
+      selected[key] = !selected[key];
+      const saved = gift.write(storageKey, selected);
+      renderCoupons();
+      if (selected[key]) gift.celebrate(8);
+      if (!saved) gift.announce('اختياركِ موجود الحين، بس ما قدرنا نحفظه للجلسة القادمة.');
+    });
+  });
+  renderCoupons();
+})();
+
+}, { once: true });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+(() => {
+  'use strict';
+  const gift = window.GiftExtras;
+  const $ = selector => document.querySelector(selector);
+  const dailyMessages = [
+    'بس حبيت أذكّركِ اليوم: وجودكِ غالي عندي، حتى في الأيام العادية 🤍',
+    'لو هاليوم مزدحم، خذي هاللحظة الصغيرة لكِ… ومعها حب كثير ♡',
+    'أحب ضحكتكِ، وأحبكِ بكل حالاتكِ. مو لازم تكونين مبسوطة طول الوقت 🤍',
+    'وردة اليوم لكِ 🌷 ومعها أمنية إن يمرّ عليكِ شيء حلو بدون ترتيب.',
+    'هذي رسالة صغيرة تقول لكِ: أنتِ في بالي، ولكِ في قلبي مكان كبير ♡',
+    'أتمنى تلقين اليوم وقت لشيء تحبينه، حتى لو كوب قهوة بهدوء ☕🤍',
+    'أهلًا بحبيبتي مرة ثانية… هالقلب الصغير كان ينتظر مروركِ ♡',
+    'ما عندي مناسبة اليوم، عندي بس كلمة: أحبكِ 🤍',
+    'خذي يومكِ على مهلكِ، ما يحتاج كل شيء يصير كامل عشان يكون حلو 🌷',
+    'شكراً لأنكِ أنتِ… بكل تفاصيلكِ العفوية اللي أحبها ♡',
+    'حضن بالكلام، ووردة من القلب، ورسالة كلها لكِ 🤍🌷',
+    'لو لهالرسالة صوت، كان قالت لكِ بهدوء: يا حلو وجودكِ ♡',
+    'أحيانًا ألطف هدية هي تذكير صغير: لكِ غلا كبير عندي 🤍',
+    'عدّى يوم وجا يوم، وهذي كلمة حب جديدة لكِ يا حبيبتي 🌷'
+  ];
+  function localDay(now) {
+    return Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
+  }
+  function openDailyEnvelope() {
+    const now = new Date();
+    const message = dailyMessages[((localDay(now) % dailyMessages.length) + dailyMessages.length) % dailyMessages.length];
+    $('#dailyEnvelopeDate').textContent = new Intl.DateTimeFormat('ar', { dateStyle: 'full' }).format(now);
+    $('#dailyEnvelopeMessage').hidden = false;
+    $('#dailyEnvelopeMessage').textContent = message;
+    $('#dailyEnvelopeBtn').textContent = 'رسالة اليوم لكِ… افتحيها متى حبيتي 💌';
+  }
+  $('#dailyEnvelopeBtn').addEventListener('click', openDailyEnvelope);
+  $('#dailyEnvelopeDate').textContent = new Intl.DateTimeFormat('ar', { dateStyle: 'full' }).format(new Date());
+
+  const moods = {
+    upset: 'إذا اليوم مو على مزاجكِ، خذي لكِ راحة على مهلكِ. ما يحتاج تشرحين شيء عشان تستاهلين كلمة حلوة وحضن 🤍',
+    missing: 'هذي حضنة صغيرة بالكلام، لين نلقى وقتنا مع بعض. وأنا أحبكِ، حتى لو هالزر ما يعرف يقولها بصوتي ♡',
+    happy: 'يا حلو فرحتكِ ☀️ خذي هالقلب الصغير يشارككِ اللحظة، وأتمنى يطول هالشعور الحلو معكِ 🤍'
+  };
+  function chooseMood(mood, save = true) {
+    if (!Object.prototype.hasOwnProperty.call(moods, mood)) return;
+    $('#moodGiftCard').dataset.mood = mood;
+    document.querySelectorAll('[data-gift-mood]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.giftMood === mood));
+    });
+    $('#moodGiftMessage').hidden = false;
+    $('#moodGiftMessage').textContent = moods[mood];
+    if (save) gift.write('moodChoice', mood);
+  }
+  document.querySelectorAll('[data-gift-mood]').forEach(button => {
+    button.addEventListener('click', () => chooseMood(button.dataset.giftMood));
+  });
+  chooseMood(gift.read('moodChoice', ''), false);
+
+  const ideas = {
+    coffee: { title: 'قهوة وحكي', description: 'قهوة على مزاجكِ، ووقت نسولف فيه بدون استعجال.' },
+    walk: { title: 'مشي على الهادي', description: 'مشوار خفيف بمكان تحبينه، وكلام عفوي بعيد عن الزحمة.' },
+    dinner: { title: 'عشاء على ذوقكِ', description: 'اختاري الأكلة اللي بخاطركِ، ونرتّب لنا وقتًا حلوًا على راحتنا.' }
+  };
+  let selectedIdea = 'coffee';
+  let countdownTimer = null;
+  let savedPlan = null;
+  const whenInput = $('#dateGiftWhen');
+  function localInputValue(date) {
+    const pad = number => String(number).padStart(2, '0');
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}T${pad(date.getHours())}:${pad(date.getMinutes())}`;
+  }
+  function parseLocalDate(value) {
+    if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(value)) return null;
+    const date = new Date(value);
+    return Number.isFinite(date.getTime()) && localInputValue(date) === value ? date : null;
+  }
+  function refreshMinimum() {
+    whenInput.min = localInputValue(new Date(Date.now() + 60000));
+  }
+  function selectIdea(idea) {
+    if (!Object.prototype.hasOwnProperty.call(ideas, idea)) return;
+    selectedIdea = idea;
+    document.querySelectorAll('[data-date-idea]').forEach(button => {
+      button.setAttribute('aria-pressed', String(button.dataset.dateIdea === idea));
+    });
+    $('#dateIdeaDescription').textContent = ideas[idea].description;
+  }
+  document.querySelectorAll('[data-date-idea]').forEach(button => {
+    button.addEventListener('click', () => selectIdea(button.dataset.dateIdea));
+  });
+  function stopCountdown() {
+    if (countdownTimer !== null) window.clearInterval(countdownTimer);
+    countdownTimer = null;
+  }
+  function renderCountdown() {
+    if (!savedPlan) return;
+    const date = parseLocalDate(savedPlan.when);
+    const remaining = date ? date.getTime() - Date.now() : 0;
+    if (remaining <= 0) {
+      stopCountdown();
+      $('#dateGiftCountdown').hidden = true;
+      $('#dateGiftStatus').textContent = 'الوقت اللي حفظتيه مرّ. إذا ودّك، اختاري وقتًا جديدًا ونتفق عليه مع بعض 🤍';
+      return;
+    }
+    const totalSeconds = Math.floor(remaining / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    const n = new Intl.NumberFormat('ar');
+    $('#dateGiftCountdown').hidden = false;
+    $('#dateGiftCountdown').textContent = `باقي للاقتراح: ${n.format(days)} يوم، ${n.format(hours)} ساعة، ${n.format(minutes)} دقيقة، ${n.format(seconds)} ثانية 🤍`;
+  }
+  function showSavedPlan(plan, persistent) {
+    savedPlan = plan;
+    selectIdea(plan.idea);
+    whenInput.value = plan.when;
+    const date = parseLocalDate(plan.when);
+    const formatted = new Intl.DateTimeFormat('ar', { dateStyle: 'medium', timeStyle: 'short' }).format(date);
+    $('#dateGiftStatus').textContent = `${persistent ? 'محفوظ على هذا الجهاز' : 'اختياركِ جاهز لهذه الزيارة فقط'}: ${ideas[plan.idea].title}، ${formatted}. هذا اقتراح، ولا يُرسل تلقائيًا.`;
+    stopCountdown();
+    renderCountdown();
+    if (date.getTime() > Date.now()) countdownTimer = window.setInterval(renderCountdown, 1000);
+  }
+  $('#dateGiftForm').addEventListener('submit', event => {
+    event.preventDefault();
+    refreshMinimum();
+    const date = parseLocalDate(whenInput.value);
+    if (!date || date.getTime() <= Date.now()) {
+      $('#dateGiftStatus').textContent = 'اختاري وقتًا قادمًا يناسبكِ، ثم احفظي الاقتراح 🤍';
+      whenInput.focus();
+      return;
+    }
+    const plan = { idea: selectedIdea, when: whenInput.value };
+    const persistent = gift.write('datePlan', plan);
+    showSavedPlan(plan, persistent);
+    gift.announce('اختياركِ جاهز، ونتفق على تفاصيله مع بعض 🤍');
+  });
+  $('#dateGiftClear').addEventListener('click', () => {
+    stopCountdown();
+    savedPlan = null;
+    gift.write('datePlan', null);
+    whenInput.value = '';
+    selectIdea('coffee');
+    $('#dateGiftCountdown').hidden = true;
+    $('#dateGiftStatus').textContent = 'تم مسح الاقتراح. اختاري فكرة ووقتًا جديدًا متى حبيتي.';
+  });
+  whenInput.addEventListener('focus', refreshMinimum);
+  whenInput.addEventListener('input', () => whenInput.setCustomValidity(''));
+  whenInput.addEventListener('invalid', () => {
+    whenInput.setCustomValidity('اختاري تاريخًا ووقتًا قادمين يناسبانكِ.');
+    $('#dateGiftStatus').textContent = 'نحتاج تاريخًا ووقتًا قادمين عشان نبدأ العدّ التنازلي 🤍';
+  });
+  refreshMinimum();
+  const priorPlan = gift.read('datePlan', null);
+  if (priorPlan && Object.prototype.hasOwnProperty.call(ideas, priorPlan.idea) && parseLocalDate(priorPlan.when)) {
+    showSavedPlan({ idea: priorPlan.idea, when: priorPlan.when }, true);
+  }
+  window.addEventListener('pagehide', stopCountdown);
+  window.addEventListener('pageshow', event => {
+    if (!event.persisted || !savedPlan) return;
+    stopCountdown();
+    renderCountdown();
+    if (parseLocalDate(savedPlan.when).getTime() > Date.now()) countdownTimer = window.setInterval(renderCountdown, 1000);
+  });
+})();
+
+}, { once: true });
 </script>
 </body>
 </html>
