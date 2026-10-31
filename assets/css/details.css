@@ -1,0 +1,23 @@
+/* Small scene and interaction details, kept separate from the visual theme. */
+body[data-scene="welcome"] .app-shell { display: none; }
+body.drawer-open { overflow: hidden; }
+.cinema-petals { position:fixed; inset:0; pointer-events:none; z-index:115; overflow:hidden; }
+.cinema-petals i { position:absolute; left:var(--x); top:-20px; width:7px; height:11px; border-radius:80% 10% 70% 20%; background:linear-gradient(130deg,#ef8b8759,#6c142ca8); animation:petalDrift var(--duration) var(--delay) linear infinite; }
+@keyframes petalDrift { 0% { transform:translate3d(0,-25px,0) rotate(0); opacity:0; } 12% { opacity:.6; } 90% { opacity:.5; } 100% { transform:translate3d(var(--drift),105vh,0) rotate(340deg); opacity:0; } }
+.world-arrival .hero-inner { animation:cinemaArrive 1.4s ease both; }
+.wrong-code { animation:codeShake .35s ease; }
+@keyframes codeShake { 20%,60% { transform:translateX(-6px); } 40%,80% { transform:translateX(6px); } }
+.secret-digit[aria-invalid="true"] { border-color:#ee7c7c; }
+.secret-digit { border-radius:50%; }
+.cinema-lock .lock-shackle { display:none; }
+.cinema-lock .lock-body { font-family:Georgia,serif; line-height:1; }
+.music-console input[type="range"] { accent-color:var(--rose); cursor:pointer; }
+.music-console input:disabled { opacity:.45; cursor:default; }
+.music-console #musicStatus { min-height:2.6em; line-height:1.9; }
+.final-scroll-letter { white-space:pre-wrap; overflow-wrap:anywhere; }
+.book-page-title,.book-page-text,.margin-secret-box { overflow-wrap:anywhere; }
+html[data-gift-shared="true"] :is(#chapter-settings,.album-actions,#editTimelineShortcut,.sidebar-link[href="#chapter-settings"]) { display:none; }
+@media (prefers-reduced-motion:reduce) {
+  .cinema-petals { display:none; }
+  .world-arrival .hero-inner,.wrong-code { animation:none; }
+}

@@ -1,0 +1,39 @@
+{
+  "started_at": "2026-10-31T07:56:08.366678+00:00",
+  "url": "http://127.0.0.1:8000",
+  "passed": [
+    "Welcome, wrong secret, back navigation, correct 262 and no autoplay",
+    "All anchor targets, top navigation, sidebar links and keyboard focus trap",
+    "Five keyboard-accessible stars, complete heart, four book pages and secret notes",
+    "Four emotion prescriptions, three quiz questions, runaway button and agreement",
+    "Wheel, complete puzzle, shuffle, coupons, garden, daily message, moods and date countdown",
+    "Real PNG and WAV uploads, captions, album lightbox, audio play/pause, photo puzzle, custom reasons and invalid files",
+    "Timeline create/edit/reorder/delete, six custom letters, story editing and final wax-sealed message",
+    "LocalStorage restoration for images, audio, text, timeline, coupons, mood, garden and date; clear date",
+    "Three keepsake designs and actual PNG download with 1080×1350 dimensions",
+    "Lazy YouTube request and play/pause/seek/skip/volume/chorus UI using simulated player protocol",
+    "Personalized standalone HTML download, offline reopening, embedded fonts/artwork/audio/text and zero asset requests",
+    "1440×900 layout, drawers, images, fonts and no horizontal scrolling",
+    "1280×720 layout, drawers, images, fonts and no horizontal scrolling",
+    "390×844 layout, drawers, images, fonts and no horizontal scrolling",
+    "360×800 layout, drawers, images, fonts and no horizontal scrolling",
+    "Greeting, kind notes, all stars, studio aura, audio text modes, dock links, hearts and media removal",
+    "Storage quota errors preserve usable in-memory edits and show save guidance",
+    "No JavaScript page errors",
+    "No missing local files or HTTP errors"
+  ],
+  "failed": [],
+  "skipped": [],
+  "external_requests_blocked": [],
+  "limitations": [
+    "YouTube streaming is excluded; controls are exercised using a simulated iframe player."
+  ],
+  "page_errors": [],
+  "local_http_errors": [],
+  "finished_at": "2026-10-31T07:56:53.893973+00:00",
+  "counts": {
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0
+  }
+}
