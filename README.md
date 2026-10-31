@@ -55,7 +55,11 @@ python3 tools/build_standalone.py
 
 ## النشر على GitHub Pages
 
-ارفع `index.html` ومجلد `assets` معًا مع الحفاظ على المسارات، واختر نشر الجذر من إعدادات GitHub Pages. لا توجد خطوة بناء إلزامية لتشغيل الموقع المتعدد الملفات. إذا عدّلت الأصول، أعد توليد النسخة المستقلة قبل رفعها حتى تعكس التنزيلات آخر التغييرات. ويمكن أيضًا نشر ملف `dist/habibti-standalone.html` منفردًا بعد تسميته `index.html`.
+أُضيف مسار نشر آلي في `.github/workflows/deploy-pages.yml`. من [إعدادات Pages](https://github.com/T5ssp/habibti-gift/settings/pages)، اختر **GitHub Actions** في **Build and deployment → Source**. يعمل النشر عند كل تحديث لفرع `main`، ويمكن تشغيله يدويًا من تبويب **Actions → Publish Habibti to GitHub Pages → Run workflow**.
+
+يُحدّث المسار النسخة المستقلة ثم ينشر `index.html` و`assets` فقط، مع `.nojekyll`؛ لا ينشر النسخ الاحتياطية أو اختبارات التطوير أو أرشيف ZIP. يظهر رابط الموقع في خطوة النشر عند نجاحها. العنوان المتوقع دون نطاق مخصص هو `https://t5ssp.github.io/habibti-gift/`؛ وجود هذا العنوان في الدليل لا يثبت اكتمال النشر.
+
+للنشر الثابت اليدوي، ارفع `index.html` ومجلد `assets` معًا مع الحفاظ على المسارات. إذا عدّلت الأصول، أعد توليد النسخة المستقلة قبل رفعها حتى تعكس التنزيلات آخر التغييرات. ويمكن أيضًا نشر ملف `dist/habibti-standalone.html` منفردًا بعد تسميته `index.html`.
 
 ## الموسيقى
 

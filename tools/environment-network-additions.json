@@ -1,0 +1,7 @@
+{
+  "description": "Proposed domain additions for GitHub Pages administration and live-site verification; draft saving was blocked because the onboarding draft is no longer editable. Add these to existing allowed domains, preserving all other settings.",
+  "add_allowed_domains": [
+    "api.github.com",
+    "t5ssp.github.io"
+  ]
+}
